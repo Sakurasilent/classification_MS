@@ -1,0 +1,1 @@
+BERT_MODEL = "./hgmodel/bert-base-chinese/"
