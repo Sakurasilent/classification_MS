@@ -24,7 +24,7 @@ class TextCNN(nn.Module):
         out = F.relu(out)
         # squeeze去掉维度为一的位置
         # unsqueeze指定位置加一个维度
-        return F.max_pool2d(out, (out.shape[2], out.shape[3])).squeeze()
+        return F.max_pool2d(out, (out.shape[2], out.shape[3])).squeeze(-1).squeeze(-1)
 
     def forward(self, input, mask):
         out = self.bert(input, mask)[0].unsqueeze(1)

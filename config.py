@@ -16,5 +16,11 @@ LR= 1e-4
 import torch
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-MODEL_DIR="./models_out/"
+MODEL_DIR="./model_out/"
+
+
+BERT_PAD_ID = 0
+
+MODEL_DIR_END = "./model_out/the_best.pth"
+
 
